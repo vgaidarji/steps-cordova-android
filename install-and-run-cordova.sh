@@ -36,16 +36,16 @@ verify_tools() {
 	#fi
 #}
 
-install_node() {
-  
-}
+#install_node() {
+#
+#}
 
 # before even going on, make sure all tools work
 verify_tools
 #verify_settings
 
 # install node.js
-install_node
+#install_node
 
 # check node installed
 

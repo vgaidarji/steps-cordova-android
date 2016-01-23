@@ -1,6 +1,6 @@
-title: Cordova Install
+title: Cordova Android
 summary: |-
-  This step allows you to install Cordova CLI.
+  This step allows you to run cordova-based Android projects.
 description: |-
   The Cordova CLI is the main tool to use for the cross-platform workflow
   described in the [Overview](https://cordova.apache.org/docs/en/latest/guide/overview/index.html).
@@ -8,10 +8,9 @@ website: https://github.com/donvigo/steps-cordova-install
 source_code_url: https://github.com/donvigo/steps-cordova-install
 support_url: https://github.com/donvigo/steps-cordova-install/issues
 host_os_tags:
-  - osx-10.10
+  - "ubuntu"
 project_type_tags:
   - android
-  - ios
 type_tags:
   - cordova
   - build

@@ -5,4 +5,4 @@ workflows:
   test:
     steps:
       - path::./:
-          title: Execute steps-cordova-install/step.sh
+          title: Execute steps-cordova-android/step.sh

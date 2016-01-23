@@ -1,6 +1,7 @@
-# Step Cordova Install
+# Step Cordova Android
 
-Step for Cordova CLI installation. More info at [https://cordova.apache.org](https://cordova.apache.org/docs/en/latest/guide/cli/index.html)
+Adds support for cordova-based Android projects at [bitrise.io](https.bitrise.io).
+More info at [https://cordova.apache.org](https://cordova.apache.org/docs/en/latest/guide/cli/index.html).
 
 ## How to use this Step
 
