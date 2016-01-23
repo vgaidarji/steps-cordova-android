@@ -1,6 +1,6 @@
 # Step Cordova Install
 
-Step for Cordova CLI installation. More info at [https://cordova.apache.org](https://cordova.apache.org/docs/en/4.0.0/guide/cli/)
+Step for Cordova CLI installation. More info at [https://cordova.apache.org](https://cordova.apache.org/docs/en/latest/guide/cli/index.html)
 
 ## How to use this Step
 

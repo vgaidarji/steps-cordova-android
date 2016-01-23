@@ -3,7 +3,7 @@ summary: |-
   Install Cordova CLI.
 description: |-
   The Cordova CLI is the main tool to use for the cross-platform workflow
-  described in the [Overview](https://cordova.apache.org/docs/en/4.0.0/guide/overview/index.html).
+  described in the [Overview](https://cordova.apache.org/docs/en/latest/guide/overview/index.html).
 website: https://github.com/donvigo/steps-cordova-install
 source_code_url: https://github.com/donvigo/steps-cordova-install
 support_url: https://github.com/donvigo/steps-cordova-install/issues
