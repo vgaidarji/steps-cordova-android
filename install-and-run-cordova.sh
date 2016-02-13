@@ -4,18 +4,11 @@ THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # load bash utils
 source "${THIS_SCRIPT_DIR}/bash_utils/formatted_output.sh"
 
-VERBOSE_MODE=""
-PLATFORM=""
-
-cordova_command=build
-platform_name=android
-build_options=--debug --verbose
-
 # locations of various tools
 GIT=git
 CURL=curl
-NODE_JS=node
-NPM=node
+NODE_JS=nodejs
+NPM=npm
 CORDOVA=cordova
 
 tool_not_found() {
