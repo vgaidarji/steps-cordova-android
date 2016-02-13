@@ -4,9 +4,19 @@ THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # load bash utils
 source "${THIS_SCRIPT_DIR}/bash_utils/formatted_output.sh"
 
+VERBOSE_MODE=""
+PLATFORM=""
+
+cordova_command=build
+platform_name=android
+build_options=--debug --verbose
+
 # locations of various tools
 GIT=git
 CURL=curl
+NODE_JS=node
+NPM=node
+CORDOVA=cordova
 
 tool_not_found() {
   echo "Could not find $1 tool, please check settings"
@@ -18,8 +28,6 @@ verify_tools() {
 	${CURL} --help >/dev/null
 	if [ $? -ne 0 ]; then
     tool_not_found ${CURL}
-		#echo "Could not find curl tool, please check settings"
-		#exit 1
 	fi
 
   # Check 'git' tool
@@ -27,43 +35,45 @@ verify_tools() {
   if [ $? -ne 0 ]; then
     tool_not_found ${GIT}
   fi
+
+  # Check 'nodejs' tool
+  ${NODE_JS} --help >/dev/null
+  if [ $? -ne 0 ]; then
+    tool_not_found ${NODE_JS}
+  fi
+
+  # Check 'npm' tool
+  ${NPM} --help >/dev/null
+  if [ $? -ne 0 ]; then
+    tool_not_found ${NPM}
+  fi
+
+  # Check 'cordova' tool
+  ${CORDOVA} --help >/dev/null
+  if [ $? -ne 0 ]; then
+    tool_not_found ${CORDOVA}
+  fi
 }
-
-#verify_settings() {
-	#if [ -z "${api_key}" ]; then
-	#	echo "Please update API_KEY with your private API key, as noted in the Settings page"
-	#	exit 1
-	#fi
-#}
-
-#install_node() {
-#
-#}
 
 # before even going on, make sure all tools work
 verify_tools
-#verify_settings
 
-# install node.js
-#install_node
+# check cordova parameters
+if [ -z "${cordova_command}" ] ; then
+    printf "\e[31mcordova_command was not defined\e[0m\n"
+    exit 1
+fi
 
-# check node installed
-
-# install cordova
-#npm install -g cordova
-
-# install cordova platforms
-#
-# $ cordova platform add ios
-# $ cordova platform add amazon-fireos
-# $ cordova platform add android
-# $ cordova platform add blackberry10
-# $ cordova platform add firefoxos
-
+if [ -z "${platform_name}" ] ; then
+    printf "\e[31mplatform_name was not defined\e[0m\n"
+    exit 1
+fi
 
 # print installed cordova platforms
-#cordova platforms ls
+cordova platforms ls
 
 # execute cordova task
+cordova ${cordova_command} ${platform_name} ${build_options}
+return_code=$?
 
-# copy artifact (*.apk, *.ipa) to bitrise directory
+exit ${return_code}
