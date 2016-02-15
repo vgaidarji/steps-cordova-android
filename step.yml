@@ -21,19 +21,17 @@ inputs:
   - cordova_command: "build"
     opts:
       title: Cordova command to run.
-      summary: |-
+      description: |-
         Run `cordova --help` to check list of available commands.
       is_required: true
-      is_expand: true
   - platform: "android"
     opts:
-      title: "Platform."
+      title: "Platform to build."
       description: |
         Choose which platform to build your dependencies for.
       value_options:
       - "android"
       is_required: true
-      is_expand: true
   - build_options: "--verbose"
     opts:
       title: Additional options for `cordova` command
@@ -43,5 +41,4 @@ inputs:
         character. For example: `--verbose`; `--debug`
         `--release --buildConfig=..\myBuildConfig.json`
       is_required: false
-      is_expand: true
 outputs: []
