@@ -36,7 +36,7 @@ verify_tools() {
   fi
 
   # Check 'npm' tool
-  ${NPM} --help >/dev/null
+  ${NPM} -v >/dev/null
   if [ $? -ne 0 ]; then
     tool_not_found ${NPM}
   fi

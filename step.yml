@@ -4,9 +4,9 @@ summary: |-
 description: |-
   The Cordova CLI is the main tool to use for the cross-platform workflow
   described in the [Overview](https://cordova.apache.org/docs/en/latest/guide/overview/index.html).
-website: https://github.com/donvigo/steps-cordova-install
-source_code_url: https://github.com/donvigo/steps-cordova-install
-support_url: https://github.com/donvigo/steps-cordova-install/issues
+website: https://github.com/vgaidarji/steps-cordova-android
+source_code_url: https://github.com/vgaidarji/steps-cordova-android
+support_url: https://github.com/vgaidarji/steps-cordova-android/issues
 host_os_tags:
   - "ubuntu"
 project_type_tags:
