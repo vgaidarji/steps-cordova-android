@@ -24,13 +24,13 @@ inputs:
       description: |-
         Run `cordova --help` to check list of available commands.
       is_required: true
-  - platform: "android"
+  - platform_name: "android"
     opts:
       title: "Platform to build."
       description: |
         Choose which platform to build your dependencies for.
       value_options:
-      - "android"
+      - android
       is_required: true
   - build_options: "--verbose"
     opts:
